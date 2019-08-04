@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class GetCiudadesService {
 
-  urlFile = '../../assets/ciudades.json';
+  urlFile = 'assets/ciudades.json';
 
   constructor(public http:HttpClient) { }
 
