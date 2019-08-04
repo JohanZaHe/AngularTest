@@ -1,0 +1,58 @@
+<!-- Modal Structure -->
+<div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+        <h4>Opciones</h4>
+        <ul class="collapsible">
+            <li>
+                <div class="collapsible-header">
+                    <i *ngIf="item.favorito" class="material-icons red-text">favorite</i>
+                    <i *ngIf="!item.favorito" class="material-icons red-text">favorite_border</i>
+                    Favorito
+                    <span class="badge">
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" [(ngModel)]="item.favorito" (click)="changeFavorite(item.id)">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons green-text">local_offer</i>
+                    Sale
+                    <span class="badge">
+                        <div class="switch">
+                            <label>
+                                <input type="checkbox" [(ngModel)]="item.sale" (click)="changeSale(item.id)">
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons orange-text">announcement</i>
+                    Estado:<span class="fw">{{item.estado}}</span>
+                    <span class="badge col s4">
+                        <a class='dropdown-trigger' href='#' data-target='dropdown1'>Actualizar estado</a>
+                        <ul id='dropdown1' class='dropdown-content'>
+                            <li><a (click)="changeStatus(item.id,'Catalogado')">Catalogado</a></li>
+                            <li><a (click)="changeStatus(item.id,'En bodega')">En Bodega</a></li>
+                            <li><a (click)="changeStatus(item.id,'En zona de distribución')">En zona de distribución</a></li>
+                            <li><a (click)="changeStatus(item.id,'Entregado')">Entregado</a></li>
+                        </ul>
+                    </span></div>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="material-icons red-text">delete</i>
+                    Eliminar
+                    <span class="badge"><a class="waves-effect waves-light btn btn-small" (click)="deleteItem(item.id)"><i class="material-icons right">done</i></a></span></div>
+            </li>
+        </ul>
+    </div>
+    <div class="modal-footer">
+        <a (click)="close()" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+    </div>
+</div>

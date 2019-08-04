@@ -1,0 +1,20 @@
+<div class="collection margin-query br">
+    <div class="collection-item">
+        <div class="col s3 m3 l3 lg center-align">
+            {{item.fecha}}
+        </div>
+        <div class="col s3 m3 l3 center-align">
+            <span style="width:100%">{{item.origen}}</span>
+            <i style="width:100%;font-size: 37px;cursor: pointer;" class="material-icons right orange-text">expand_more</i>
+            <span class="d-block" style="width:100%;">{{item.destino}}</span>
+        </div>
+        <div class="col s12 m6 l6" style="float:left">
+            <div class="col s5"><i class="large material-icons">local_shipping</i></div>
+            <div class="col s3 d-block">
+                <h5 style="line-height:2">${{item.precio}}</h5>
+            </div>
+            <div class="col s-2 number">{{item.cantidad}}</div>
+            <a class="modal-trigger" data-target="modal1" (click)="sendItem(item)"><i class="material-icons right more-vert">more_vert</i></a>
+        </div>
+    </div>
+</div>

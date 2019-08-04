@@ -1,0 +1,43 @@
+<div class="col s12 m12 l3 center-align vhFullHeight">
+        <i class="large material-icons accent2-2-color" style="line-height:2 !important;">extension</i>
+
+        <div class="center-align">
+            <h5><i class="material-icons">lightbulb_outline</i> Smart filters</h5>
+        </div>
+        <hr>
+        <!-- Switch -->
+        <div class="switch" style="margin-top: 25px;">
+            <label>
+                <i class="material-icons">monetization_on</i>
+                <input type="checkbox" [(ngModel)]="filterSale" (click)="filterSale=!filterSale;filter();">
+                <span class="lever"></span>
+            </label>
+        </div>
+
+
+        <!-- Disabled Switch -->
+        <div class="switch" style="margin-top: 25px;margin-bottom: 25px;">
+            <label>
+                <i class="material-icons">favorite_border</i>
+                <input type="checkbox" [(ngModel)]="filterFavorite" (click)="filterFavorite=!filterFavorite;filter();">
+                <span class="lever"></span>
+            </label>
+        </div>
+
+        <hr>
+        <div class="center-align">
+            <h6 style="font-weight: 500;">Status</h6>
+        </div>
+        <div class="row">
+            <div class="col s12 m11 l10">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">search</i>
+                        <input id="icon_prefix" type="text" class="validate" [(ngModel)]="status">
+                        <label for="icon_prefix">Search</label>
+                    </div>
+                </div>
+                <a class="waves-effect waves-light btn" (click)="search()">Delivered</a>
+            </div>
+        </div>
+    </div>

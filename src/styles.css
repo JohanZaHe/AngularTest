@@ -1,0 +1,100 @@
+/* You can add global styles to this file, and also import other style files */
+.p-0{
+    padding: 0px !important;
+   }
+   
+   .indigo.accent2-2 {
+       background-color: #2bbbad !important;
+   }
+   
+   .accent2-2-color{
+       color: #2bbbad !important;
+   }
+   
+   .navPadding{
+       padding-top: 40px !important;
+       padding-right: 100px !important ;
+       padding-left: 10px !important;
+   }
+   
+   .vhFullHeight{
+       min-height: 100vh;
+   }
+   
+   .hr{
+       font-family: "Inconsolata";
+       margin: 0 auto;
+       display: inline-block;
+       padding: 0 10px;
+       border-bottom: 1px solid rgba(0,0,0,0.2);
+   }
+   
+   .switch label .lever:before, .switch label .lever:after {
+       width: 34px !important;
+       height: 34px !important;
+   }
+   
+   .switch label .lever{
+       width: 52px !important;
+       height: 29px !important;
+   }
+   
+   .switch label .lever:after{
+       color: #ffffff !important;
+   }
+   
+   .margin-query{
+       margin-right: 93px !important;
+   }
+   
+   .margin-search{
+       margin-left: 41.5% !important;
+   }
+   
+   .d-block{
+       display: inline-block;
+   }
+   
+   .more-vert{
+       line-height: 3.5 !important;
+       cursor: pointer !important;
+       color: #000000;
+   }
+   
+   .option-menu{
+       width:100% !important;
+       line-height: 0.5 !important;
+   }
+   
+   .li-menu{
+       min-width:25%;
+       text-align: center;
+       font-size: smaller;
+   }
+   
+   .number{
+       height:40px;
+       background-color:#ed5356;
+       color:#ffffff;
+       display: inline-block;
+       border-radius: 5px; 
+       font-size: 23px;
+       line-height: 1.5;
+       text-align: center;
+       margin-left: 25px;
+       margin-top: 22px;
+   }
+   
+   @media (max-width: 992px) {
+       .navPadding{
+           padding-right: 10px !important ;
+           padding-left: 10px !important;
+       }
+       .margin-query{
+           margin-right: 10px !important;
+       }
+   
+       .margin-search{
+           margin-left: 0% !important;
+       }
+   }

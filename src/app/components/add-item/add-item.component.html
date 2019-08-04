@@ -1,0 +1,53 @@
+<div class="row offset-s1">
+    <h5 class="mt col offset-s4">Nuevo registro</h5>
+    <form [formGroup]="formItem" class="col s12 m9 l9 mt offset-m1 offset-l1" (ngSubmit)="create()">
+        <div class="row">
+            <div class="input-field col s12 m6 l6">
+                <input formControlName="cantidad" id="cantidad" type="text" autocomplete="off">
+                <label for="cantidad">Cantidad</label>
+            </div>
+            <div class="input-field col s12 m6 l6">
+                <input formControlName="precio" id="precio" type="text" id="precio" autocomplete="off">
+                <label for="precio">Precio</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l6">
+                <select formControlName="origen" id="origen">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option *ngFor="let ciudad of ciudades" [value]="ciudad">{{ciudad}}</option>
+                </select>
+                <label>Origen</label>
+            </div>
+
+            <div class="col s12 m6 l6">
+                <select formControlName="destino" id="destino">
+                    <option value="" disabled selected>Seleccionar</option>
+                    <option *ngFor="let ciudad of ciudades" [value]="ciudad">{{ciudad}}</option>
+                </select>
+                <label>Destino</label>
+            </div>
+        </div>
+        <!-- Switch -->
+        <div class="switch input-field col s6">
+            <label>
+                Sale
+                <input type="checkbox" value="true" id="sale" formControlName="sale">
+                <span class="lever"></span>
+            </label>
+        </div>
+
+        <!-- Switch -->
+        <div class="switch input-field col s6">
+            <label>
+                Favorito
+                <input formControlName="favorito" id="favorito" value="true" type="checkbox">
+                <span class="lever"></span>
+            </label>
+        </div>
+
+        <div class="col s12 center-align mt">
+            <button class="waves-effect waves-light btn" [disabled]="!formItem.valid" ><i class="material-icons left">cloud</i>Create</button>
+        </div>
+    </form>
+</div>
